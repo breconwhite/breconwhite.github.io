@@ -1,0 +1,130 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="FontAwesome/css/font-awesome.min.css">
+  	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+	<!--HEADER-->
+
+	<div id="Header">
+		<a href="index.html">
+			<div id="hInfo">
+				<div id="Name"><p>Brecon White</p></div>
+				<div id="LogoBack"></div>
+				<div id="Logo"><img src="Images/logo.png"> </div>
+			</div>
+		</a>
+		<div id="hNav">
+			<div id="hLinks">
+				<a href="about.html" class="NavButtonA">About</a>
+				<a href="portfolio.html" class="NavButtonP">Portfolio</a>
+			</div>
+			<div id="hSubLinks"></div>
+		</div>
+	</div>
+	
+	<!--MAIN-->
+
+	<div id="Main" class="noScroll">
+		
+		<div class="sliderArrow sL" style="left:0"><i class="fa fa-chevron-left"></i></div>
+		<div class="sliderArrow sR" style="right:0"><i class="fa fa-chevron-right"></i></div>
+		
+		<div class="Slide slide0 activeSlide">
+			<a href="http://windchillstudios.github.io">
+				<div id="SlideText">A Pulse Influenced Arcade Brawler!</div>
+				<img src="Images/pulse.png">
+			</a>
+		</div>	
+		<div class="Slide slide1 fadeOut">
+			<a href="http://jleitch.com/designstudio/">
+				<div id="SlideText">Control a Puppet with Your Hands in an </br> Interactive World, Using Leap Motion.</div>
+				<img src="Images/puppet.png">
+			</a>
+		</div>
+		<div class="Slide slide2 fadeOut">
+			<a href="http://windchillstudios.github.io">
+				<div id="SlideText">Check Out My Portfolio!</div>
+				<img src="Images/pulse.png">
+			</a>
+		</div>	
+	</div>
+	
+	<!--CONTACT-->
+
+	<div id="Contact">Copyright <i class="fa fa-copyright"></i> 2015 &nbsp | &nbsp
+		<a href="mailto:breconwhite@gmail.com"><i class="fa fa-envelope"></i></a>&nbsp
+		<a href="https://github.com/breconwhite"><i class="fa fa-github"></i></a>
+		<a style="position:fixed; right:15; opacity:0.5" href="notthepage.html"><i class="fa fa-rebel"></i></a>
+	</div>
+
+
+	<script>
+		
+		var loopTime = setInterval(function() {loop("Right")}, 5000);
+
+		var loopCount = 0;
+
+		$( "a.NavButtonA" ).hover(
+		  function() {
+		    $( this ).append( $( 
+		    	"<div id='subNav' class='NavButtonA'><a>Resume</a><a href='https://github.com/breconwhite'>Github</a><a href='mailto:breconwhite@gmail.com'>Message</a></div>" ) );
+		  }).mouseleave(
+	    	function(){
+    			$(this).find( "div#subNav" ).remove();
+    	});
+		 
+		$( "a.NavButtonP" ).hover(
+		  function() {
+		    $( this ).append( 
+		    	$( "<div id='subNav'><a>Web</a><a>Design</a><a>Games</a></div>" ) 
+		    );
+		  }).mouseleave(
+	    	function(){
+	    		$(this).find( "div#subNav" ).remove();
+    	});
+
+
+	 	$( "div.sR" ).click(function(){loop("Right"); clearInterval(loopTime); loopTime = setInterval(function() {loop("Right")}, 5000) });
+	 	$( "div.sL" ).click(function(){loop("Left"); clearInterval(loopTime); loopTime = setInterval(function() {loop("Right")}, 5000)  });
+
+	 	function loop(direction){
+ 			
+ 			if(direction == "Right")
+ 			{
+ 				if(loopCount < 2){
+ 					loopCount ++;
+ 				}
+ 				else {
+ 					loopCount = 0;
+ 				}
+ 			}
+			else if(direction == "Left"){
+ 				if(loopCount > 0){
+ 					loopCount --;
+ 				}
+ 				else {
+ 					loopCount = 2;
+ 				}
+			}
+	 		
+ 			switch(loopCount){
+ 				case 0:
+ 					$("div").find("div.Slide").removeClass("activeSlide").removeClass("shiftLeft").removeClass("shiftRight").addClass("fadeOut");
+ 					$("div").find("div.slide0").addClass("activeSlide").addClass("shift"+direction).removeClass("fadeOut");
+ 					break;
+ 				case 1:
+ 					$("div").find("div.Slide").removeClass("activeSlide").removeClass("shiftLeft").removeClass("shiftRight").addClass("fadeOut");
+ 					$("div").find("div.slide1").addClass("activeSlide").addClass("shift"+direction).removeClass("fadeOut");	 					
+ 					break;
+ 				case 2:
+ 					$("div").find("div.Slide").removeClass("activeSlide").removeClass("shiftLeft").removeClass("shiftRight").addClass("fadeOut");
+ 					$("div").find("div.slide2").addClass("activeSlide").addClass("shift"+direction).removeClass("fadeOut");
+ 					break;
+ 			}
+	 	}
+
+	</script>
+</body> 

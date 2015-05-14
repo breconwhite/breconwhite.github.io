@@ -1,0 +1,68 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="FontAwesome/css/font-awesome.min.css">
+  	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+		<!--HEADER-->
+
+	<div id="Header">
+		<a href="index.html">
+			<div id="hInfo">
+				<div id="Name"><p>Brecon White</p></div>
+				<div id="LogoBack"></div>
+				<div id="Logo"><img src="Images/logo.png"> </div>
+			</div>
+		</a>
+		<div id="hNav">
+			<div id="hLinks">
+				<a href="about.html" class="NavButtonA">About</a>
+				<a href="portfolio.html" class="NavButtonP">Portfolio</a>
+			</div>
+			<div id="hSubLinks"></div>
+		</div>
+	</div>
+
+	<!--MAIN-->
+
+	<div id="Main">
+		<div id="fourOhText"><strong>404</strong></br>This is probably not the page you are looking for! Click <a href="index.html">HERE</a> to return home, or feel free to just hang around, if that's what you're into!</div>
+		<img src="http://i.minus.com/ibaHdninN7RLba.gif">
+		<img src="http://media1.giphy.com/media/ibJT8irfap5xS/giphy.gif">
+		<img src="http://i.imgur.com/uVp0K.gif">
+	</div>
+
+	<!--CONTACT-->
+
+	<div id="Contact">Copyright <i class="fa fa-copyright"></i> 2015 &nbsp | &nbsp
+		<a href="mailto:breconwhite@gmail.com"><i class="fa fa-envelope"></i></a>&nbsp
+		<a href="https://github.com/breconwhite"><i class="fa fa-github"></i></a>
+		<a style="position:fixed; right:15; opacity:0.5" href="notthepage.html"><i class="fa fa-rebel"></i></a>
+	</div>
+
+
+	<script>
+
+		$( "a.NavButtonA" ).hover(
+		  function() {
+		    $( this ).append( $( 
+		    	"<div id='subNav' class='NavButtonA'><a>Resume</a><a href='https://github.com/breconwhite'>Github</a><a href='mailto:breconwhite@gmail.com'>Message</a></div>" ) );
+		  }).mouseleave(
+	    	function(){
+    			$(this).find( "div#subNav" ).remove();
+    	});
+		 
+		$( "a.NavButtonP" ).hover(
+		  function() {
+		    $( this ).append( 
+		    	$( "<div id='subNav'><a>Web</a><a>Design</a><a>Games</a></div>" ) 
+		    );
+		  }).mouseleave(
+	    	function(){
+	    		$(this).find( "div#subNav" ).remove();
+    	});
+
+  	</script>
+
+</body>

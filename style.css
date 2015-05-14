@@ -1,0 +1,411 @@
+
+@font-face {
+    font-family: birch;
+    src: url(Fonts/BirchStd.otf);
+}
+
+@font-face {
+    font-family: geo;
+    src: url(Fonts/GeosansLight.ttf);
+}
+
+body{
+	background-color: #444;
+	margin: 0px;
+}
+
+#Header{
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+}
+
+#hInfo{
+	position: fixed;
+	left: -25px;
+	top: -25px;
+	z-index: 2;
+	width: 225px;
+	height: 200px;
+}
+
+#LogoBack{
+	position: fixed;
+	transform: rotate(10deg);
+	background-color: white;
+	width: 225px;
+	height: 200px;
+}
+
+#hInfo img{
+    position: absolute;
+    top: 40px;
+    left: 70px;
+}
+
+#Name p{
+	top: 110px;
+	left: 10px;
+	width: 100%;
+	position: absolute;
+    color: black;
+    font-family: birch;
+    font-size: 30px;
+	text-align: center;
+	z-index: 2;
+}
+
+#hNav{
+    transform: rotate(-2deg);
+	height: 150px;
+	width: inherit;
+    background: url("Images/back2.png"); 
+    font-family: geo;
+    position: fixed;
+	left: 50px;
+	top: -50px;
+	z-index: 1;
+	border-bottom: 2px solid white;
+}
+
+#subNav{
+	position: absolute;
+	top: 25px;
+	padding: 25px 0px 15px 0px;
+	height: 20px;
+	width: 300px;
+	left: 25px;
+	z-index: 2;
+}
+
+#subNav a{
+	font-size: 14pt !important;
+}
+
+#hLinks{
+	position: relative;
+	top: 110px;
+	left: 160px;
+}
+
+#hLinks a{
+	color: white;
+	font-size: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+}
+#hLinks a:hover{
+	color: #BBB;
+}
+
+#hSubLinks{
+	width: 100%;
+	height: 40px;
+	position: relative;
+	background-color: rgb(30,40,50);
+	opacity: 0.75;
+	top: 122px;
+	z-index: 0;
+}
+
+.sliderArrow{
+	color: white;
+	opacity: 0.5;
+	padding: 0px 40px 0px 40px;
+	font-size: 30pt;
+	position: absolute;
+	z-index: 3;
+	top: 55%;
+	cursor: pointer;
+}
+
+#Main{
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#Main img{
+	width: 100%;
+}
+
+#Main a{
+	font-family: geo;
+	text-decoration: none;
+	color: #AAA;
+}
+
+#SlideText{
+	position:fixed; 
+	bottom:20%; 
+	right:8%;
+	font-size: 30px;
+  	color: white;
+    font-family: geo;
+    text-align: right;
+}
+
+@-webkit-keyframes slideRight{
+	0%{left:500px; opacity: 0; width: 100%}
+	100%{left:0px; opacity: 1; width: 100%} 
+}
+
+@-webkit-keyframes slideLeft{
+	0%{left:-500px; opacity: 0; width: 100%}
+	100%{left:0px; opacity: 1; width: 100%} 
+}
+
+@-webkit-keyframes fadeAway{
+	0%{opacity: 1; width: 100%; visibility: visible}
+	100%{opacity: 0; width: 100%; visibility: hidden} 
+}
+
+.fadeOut{
+	-webkit-animation: fadeAway 1s forwards;
+}
+
+.shiftLeft{
+	-webkit-animation: slideLeft 1s;
+
+}
+.shiftRight{
+	-webkit-animation: slideRight 1s;
+
+}
+
+.activeSlide{
+	visibility: visible;
+}
+
+.Slide{
+	top:75px;
+	position: fixed;
+	z-index: 0;
+}
+
+#Contact{
+	position: fixed;
+	border-top: 5px solid rgb(30,40,50);
+	width: 100%;
+	padding:8px 0px 8px 0px;
+	background-color: rgb(30,40,50);
+    background: url("Images/back2.png"); 
+	text-align: center;
+	bottom: 0px;
+	overflow: hidden;
+	margin-left: 0px;
+	margin-right: 0px;
+    font-family: geo;
+    font-size: 15px;
+    color: white;
+    z-index: 1;
+}
+
+#Contact a{
+	color: white;
+	font-size: 15px;
+}
+
+#AboutContainer{
+	width: 100%;
+	height: 100%;
+}
+
+#AboutPic{
+	position: fixed;
+	background: #C9C9C9;
+	width: 100%;
+	height: 100%;
+}
+
+#AboutPic img{
+	position: fixed;
+	bottom: 40px;
+}
+
+#About
+{
+	position: absolute;
+	background:rgba(0,0,0,0.6);
+	width: 40%;
+	height: 100%;
+	left: 15%;
+	color:white;
+	font-family:Arial;
+	text-align:justify;	
+	
+	float:left;
+}
+
+#About p{
+	font-family:geo;
+	padding: 175px 30px 0px 30px;
+}
+
+#About a
+{
+	padding: 0px 30px 0px 45px;
+	display: block;
+	color:white;
+	font-family:geo;
+	text-decoration:none;
+	font-size: 18pt;
+}
+
+.portNav{
+
+	left: 0;
+	right: 0;
+	margin: 0 auto 0 auto;
+    width: 60%;
+    height: 300px;
+	top: 200px;
+	position: fixed;
+	z-index: 0;
+}
+
+.portNav span{
+	font-size: 25px;
+	top: 130px;
+}
+
+#portNavButton{
+	width: 31.8%;
+	display: inline-block;
+	height: 100%;
+	margin-right: 10px;
+	text-align: center;
+}
+
+#portNavButton:hover{
+	opacity: 0.75;
+}
+
+#portNavButton span{
+	color: white;
+	position: relative;
+}
+
+#portContent{
+	margin-top: 350px;
+	position: relative;
+}
+
+.portBlock{
+	height: 600px;
+	margin-bottom: 20px;
+}
+
+.portBlockContent{
+	position: relative;
+	top: 175px;
+	width: 100%;
+	height: 100%;
+	background: rgb(30,40,50);
+}
+
+.portBlockContent h1{
+	padding: 50px 20% 20px 20%;
+	font-family: geo;
+	font-size: 32px;
+	color: white;
+	font-weight: normal;
+}
+
+
+@-webkit-keyframes moveitUp{
+	0%{width: 100%; top: -50px; }
+	100%{width: 100%; top: -105px; transform: rotate(0deg)} 
+}
+
+@-webkit-keyframes moveicoUp{
+	0%{top: -25px}
+	100%{top: -110px} 
+}
+
+@-webkit-keyframes moveicoDown{
+	0%{top: -90px}
+	100%{top: -25px}  
+}
+
+@-webkit-keyframes makeItSmall{
+	0%{top: 200px; height: 300px; }
+	100%{top: 30px; height: 90px; } 
+}
+@-webkit-keyframes moveitDown{
+	0%{width: 100%; top: -110px} 
+	100%{width: 100%; top: -50px; transform: rotate(-2deg)}
+}
+
+@-webkit-keyframes makeItBig{
+	0%{top: 40px; height: 90px; } 
+	100%{top: 200px; height: 300px; }
+}0
+
+@-webkit-keyframes makeSpanBig{
+	0%{ top: 65px; font-size: 14pt;} 
+	100%{ top: 130px; font-size: 25px;}
+}
+
+@-webkit-keyframes makeSpanSmall{
+	0%{ top: 130px; font-size: 25px;}
+	100%{ top: 65px; font-size: 14pt;}
+}
+
+.moveUp{
+	-webkit-animation: moveitUp 0.6s forwards;
+}
+
+.moveIconUp{
+	-webkit-animation: moveicoUp 0.6s forwards;
+}
+.moveIconDown{
+	-webkit-animation: moveicoDown 0.6s forwards;
+}
+
+.makeNavSmall{
+	-webkit-animation: makeItSmall 0.5s forwards;
+}
+
+.makeNavBig span{
+	-webkit-animation: makeSpanBig 0.5s forwards;
+}
+
+.makeNavSmall span{
+	-webkit-animation: makeSpanSmall 0.5s forwards;
+}
+
+.moveDown{
+	-webkit-animation: moveitDown 0.6s forwards;
+}
+
+.makeNavBig{
+	-webkit-animation: makeItBig 0.5s forwards;
+}
+
+.makeNavSmall span{
+	top: 75px;
+}
+
+#fourOhText{
+	position: fixed;
+	background: rgba(0,0,0,0.8);
+	width: 30%;
+	padding: 30px 30px 30px 30px;
+	top:40%;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: geo;
+	color: white;
+	font-size: 20pt;
+	text-align: center;
+}
+
+#fourOhText strong{
+	font-size: 34pt;
+}
