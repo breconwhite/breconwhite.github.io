@@ -315,6 +315,13 @@ body{
 	font-weight: normal;
 }
 
+.portBlockContent span{
+	padding: 30px 20% 20px 20%;
+	font-family: geo;
+	font-size: 24px;
+	color: white;
+}
+
 
 @-webkit-keyframes moveitUp{
 	0%{width: 100%; top: -50px; }
