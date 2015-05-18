@@ -148,31 +148,67 @@ body{
     text-align: right;
 }
 
+/*Slide Right*/
+
 @-webkit-keyframes slideRight{
 	0%{left:500px; opacity: 0; width: 100%}
 	100%{left:0px; opacity: 1; width: 100%} 
 }
+@-moz-keyframes slideRight{
+	0%{left:500px; opacity: 0; width: 100%}
+	100%{left:0px; opacity: 1; width: 100%} 
+}
+@keyframes slideRight{
+	0%{left:500px; opacity: 0; width: 100%}
+	100%{left:0px; opacity: 1; width: 100%} 
+}
+
+/*Slide Left*/
 
 @-webkit-keyframes slideLeft{
 	0%{left:-500px; opacity: 0; width: 100%}
 	100%{left:0px; opacity: 1; width: 100%} 
 }
+@-moz-keyframes slideLeft{
+	0%{left:-500px; opacity: 0; width: 100%}
+	100%{left:0px; opacity: 1; width: 100%} 
+}
+@keyframes slideLeft{
+	0%{left:-500px; opacity: 0; width: 100%}
+	100%{left:0px; opacity: 1; width: 100%} 
+}
+
+/*Fade*/
 
 @-webkit-keyframes fadeAway{
+	0%{opacity: 1; width: 100%; visibility: visible}
+	100%{opacity: 0; width: 100%; visibility: hidden} 
+}
+@-moz-keyframes fadeAway{
+	0%{opacity: 1; width: 100%; visibility: visible}
+	100%{opacity: 0; width: 100%; visibility: hidden} 
+}
+@keyframes fadeAway{
 	0%{opacity: 1; width: 100%; visibility: visible}
 	100%{opacity: 0; width: 100%; visibility: hidden} 
 }
 
 .fadeOut{
 	-webkit-animation: fadeAway 1s forwards;
+	-moz-animation: fadeAway 1s forwards;
+	animation: fadeAway 1s forwards;
 }
 
 .shiftLeft{
 	-webkit-animation: slideLeft 1s;
+	-moz-animation: slideLeft 1s;
+	animation: slideLeft 1s;
 
 }
 .shiftRight{
 	-webkit-animation: slideRight 1s;
+	-moz-animation: slideRight 1s;
+	animation: slideRight 1s;
 
 }
 
@@ -322,75 +358,171 @@ body{
 	color: white;
 }
 
+/*Move Bar Up*/
 
 @-webkit-keyframes moveitUp{
 	0%{width: 100%; top: -50px; }
 	100%{width: 100%; top: -105px; transform: rotate(0deg)} 
 }
+@-moz-keyframes moveitUp{
+	0%{width: 100%; top: -50px; }
+	100%{width: 100%; top: -105px; transform: rotate(0deg)} 
+}
+@keyframes moveitUp{
+	0%{width: 100%; top: -50px; }
+	100%{width: 100%; top: -105px; transform: rotate(0deg)} 
+}
+
+/*Move Icon Up*/
 
 @-webkit-keyframes moveicoUp{
 	0%{top: -25px}
 	100%{top: -110px} 
 }
+@-moz-keyframes moveicoUp{
+	0%{top: -25px}
+	100%{top: -110px} 
+}
+@keyframes moveicoUp{
+	0%{top: -25px}
+	100%{top: -110px} 
+}
+
+/*Move Icon Down*/
 
 @-webkit-keyframes moveicoDown{
 	0%{top: -90px}
 	100%{top: -25px}  
 }
+@-moz-keyframes moveicoDown{
+	0%{top: -90px}
+	100%{top: -25px}  
+}
+@keyframes moveicoDown{
+	0%{top: -90px}
+	100%{top: -25px}  
+}
+
+/*Make Small*/
 
 @-webkit-keyframes makeItSmall{
 	0%{top: 200px; height: 300px; }
 	100%{top: 30px; height: 90px; } 
 }
+@-moz-keyframes makeItSmall{
+	0%{top: 200px; height: 300px; }
+	100%{top: 30px; height: 90px; } 
+}
+@keyframes makeItSmall{
+	0%{top: 200px; height: 300px; }
+	100%{top: 30px; height: 90px; } 
+}
+
+/*Move Down*/
+
 @-webkit-keyframes moveitDown{
 	0%{width: 100%; top: -110px} 
 	100%{width: 100%; top: -50px; transform: rotate(-2deg)}
 }
+@-moz-keyframes moveitDown{
+	0%{width: 100%; top: -110px} 
+	100%{width: 100%; top: -50px; transform: rotate(-2deg)}
+}
+@keyframes moveitDown{
+	0%{width: 100%; top: -110px} 
+	100%{width: 100%; top: -50px; transform: rotate(-2deg)}
+}
+
+/*Make Big*/
 
 @-webkit-keyframes makeItBig{
 	0%{top: 40px; height: 90px; } 
 	100%{top: 200px; height: 300px; }
-}0
+}
+@keyframes makeItBig{
+	0%{top: 40px; height: 90px; } 
+	100%{top: 200px; height: 300px; }
+}
+@-moz-keyframes makeItBig{
+	0%{top: 40px; height: 90px; } 
+	100%{top: 200px; height: 300px; }
+}
+
+/*Make Text Big*/
 
 @-webkit-keyframes makeSpanBig{
 	0%{ top: 65px; font-size: 14pt;} 
 	100%{ top: 130px; font-size: 25px;}
 }
+@-moz-keyframes makeSpanBig{
+	0%{ top: 65px; font-size: 14pt;} 
+	100%{ top: 130px; font-size: 25px;}
+}
+@keyframes makeSpanBig{
+	0%{ top: 65px; font-size: 14pt;} 
+	100%{ top: 130px; font-size: 25px;}
+}
+
+/*Make Text Small*/
 
 @-webkit-keyframes makeSpanSmall{
+	0%{ top: 130px; font-size: 25px;}
+	100%{ top: 65px; font-size: 14pt;}
+}
+@-moz-keyframes makeSpanSmall{
+	0%{ top: 130px; font-size: 25px;}
+	100%{ top: 65px; font-size: 14pt;}
+}
+@keyframes makeSpanSmall{
 	0%{ top: 130px; font-size: 25px;}
 	100%{ top: 65px; font-size: 14pt;}
 }
 
 .moveUp{
 	-webkit-animation: moveitUp 0.6s forwards;
+	-moz-animation: moveitUp 0.6s forwards;
+	animation: moveitUp 0.6s forwards;
 }
 
 .moveIconUp{
 	-webkit-animation: moveicoUp 0.6s forwards;
+	-moz-animation: moveicoUp 0.6s forwards;
+	animation: moveicoUp 0.6s forwards;
 }
 .moveIconDown{
 	-webkit-animation: moveicoDown 0.6s forwards;
+	-moz-animation: moveicoDown 0.6s forwards;
+	animation: moveicoDown 0.6s forwards;
 }
 
 .makeNavSmall{
 	-webkit-animation: makeItSmall 0.5s forwards;
+	-moz-animation: makeItSmall 0.5s forwards;
+	animation: makeItSmall 0.5s forwards;
 }
 
 .makeNavBig span{
 	-webkit-animation: makeSpanBig 0.5s forwards;
+	-moz-animation: makeSpanBig 0.5s forwards;
+	animation: makeSpanBig 0.5s forwards;
 }
 
 .makeNavSmall span{
 	-webkit-animation: makeSpanSmall 0.5s forwards;
+	-moz-animation: makeSpanSmall 0.5s forwards;
+	animation: makeSpanSmall 0.5s forwards;
 }
 
 .moveDown{
 	-webkit-animation: moveitDown 0.6s forwards;
+	-moz-animation: moveitDown 0.6s forwards;
+	animation: moveitDown 0.6s forwards;
 }
 
 .makeNavBig{
 	-webkit-animation: makeItBig 0.5s forwards;
+	-moz-animation: makeItBig 0.5s forwards;
+	animation: makeItBig 0.5s forwards;
 }
 
 .makeNavSmall span{
