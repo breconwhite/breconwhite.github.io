@@ -32,19 +32,83 @@
 				<div id="web" class="portBlock">
 					<div class="portBlockContent">
 						<h1>Web</h1>
-						<span>Coming Soon! This week!</span>
+						<div class="portLinks">
+							<a class="folder"><img src="Images/logothumb.png">My Portfolio Site</a>
+							<div class="portInfo">
+								<img>
+								<div>Welcome to my personal portfolio! Everything on this site was built and coded from the ground up using only HTML, CSS, Javascript and the jQuery library. It's a great example of some of my web development skills and will be constantly updated with new features and content.</div>
+							</div>
+
+							<a class="folder"><img src="Images/kivutothumb.png">Kivuto and OnTheHub</a>
+							<div class="portInfo">
+								Over the Summer of 2014, I worked for Kivuto Solutions and the OnTheHub brand, a software distribution company for students and faculty. During this time I worked with their marketing team and assisted in updating sites and preparing the release of the OnTheHub September relaunch.</br></br>
+								<div style="left:0; right:0; margin: 10px auto 10px auto; display: block; width: 575px; padding: 20 50 20 50">
+									<a href="http://kivuto.com"><img src="Images/kivuto.png" style="width:200px"></a>
+									<a href="http://onthehub.com" style="float: right"><img src="Images/onthehub.png" style="width:200px"></a>
+								</div>
+							</div>
+						
+						</div>
 					</div>
 				</div>
+
 				<div id="design"  class="portBlock">
 					<div class="portBlockContent">
 						<h1>Design</h1>
-						<span>Coming Soon! This week!</span>
+						<div class="portLinks">
+							<a class="folder"><img src="Images/logothumb.png">Logo</a>
+							<div class="portInfo"><img src="Images/bwLogo.png" style="width:200px; display: block; padding: 0 20 50 20;">A personal logo created and iterated by me for use on all of my projects as a personal brand.</div>
+
+							<a class="folder"><img src="Images/gravitythumb.png">Gravity</a>
+							<div class="portInfo"><img src="Images/gvLogo.png" style="width:200px; display: block; padding: 0 20 50 20;">A logo created for fun, for an eSports gaming team asking for fan-made logos. </div>
+
+							<a class="folder"><img src="Images/pulsethumb.png">Pulse Fighters</a>
+							<div class="portInfo"><img src="Images/pfLogo.png" style="width:400px; display: block; padding: 0 20 50 20;">The logo for our Pulse Fighters game, a senior project. More can be found below.</div>
+
+							<a class="folder"><img src="Images/logoSmall.png">Poster Redesign</a>
+							<div class="portInfo"><img src="Images/kfhPoster.png" style="width:80%; display: block; padding: 0 10% 50 10%">A poster redesign for the movie Kung Fu Hustle, by Sony Pictures, done as a class project. </div>
+
+						</div>
 					</div>
 				</div>
 				<div id="games"  class="portBlock">
 					<div class="portBlockContent">
 						<h1>Games</h1>
-						<span>Coming Soon! This week!</span>
+						<div class="portLinks">
+							<a class="folder"><img src="Images/pulsethumb.png">Pulse Fighters</a>
+							<div class="portInfo">
+
+								<video width="90%" controls style="display: block; left: 0; right: 0; margin: 0 auto 20px auto"><source src="Videos/PFTrailer.mp4"></source></video>
+
+								</br></br>
+								
+								Pulse Fighters is a 4-Player Arcade-Style-Brawler that reacts and changes depending on your heart rate. It included a pulse sensor, 3D printed controllers and the us of a wireless mobile app controller that allows anyone to jump in and play without needing anything but a phone or tablet. </br></br>
+
+								As lead programmer on the project, I created the game engine and UI functionality, while also assisting with networking and many other aspects, including models and texturing. </br></br>
+
+								It was created along with five other team members for the Carleton University Interactive Multimedia and Design Senior Project Fair. More can be found at our <a href="http://jletich.com/sp">website.</a></div>
+
+							<a class="folder"><img src="Images/puppetthumb.png">Puppet Paradise</a>
+
+							<div class="portInfo">
+								<video width="90%" controls style="display: block; left: 0; right: 0; margin: 0 auto 20px auto"><source src="Videos/PPTrailer.mp4"></source></video>
+
+								</br></br>
+								
+								Puppet Paradise is a sandbox exploration game aimed at younger children. Using the Leap Motion Plus hand tracking technology, the player controls a puppet with their thumbs and forefingers, allowing them to move about and interact with the game world. </br></br>
+
+								As lead programmer on this project, I created the game engine and integrated the Leap Motion API, as well as assited in 3D models and game design. </br></br>
+
+								With two other team members, this game was created for a class at Carleton University. More can be found at our <a href="http://jleitch.com/designstudio/">website.</a>
+							</div>
+
+							<a class="folder"><img src="Images/logoSmall.png">Harpoon (Working Title)</a>
+							<div class="portInfo">
+
+								The newest project that I am currently working on. It is still in it's very early stages, but tune in soon for more information!
+							</div>
+
+						</div>
 					</div>
 				</div>
 			</div>
@@ -70,6 +134,10 @@
 
 
 	<script>
+		
+		$( "div.portLinks > a" ).click(function() {
+			$(this).next().slideToggle( "slow" );
+		});
 
 		$( "a.NavButtonA" ).hover(
 		  function() {
