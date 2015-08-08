@@ -1,0 +1,20 @@
+<html>
+
+<div id="search">
+	<img src="">
+	<p>Advertoogle</p>
+	<form method="GET">
+		<input type="text" name="search">
+		<input type="submit" value="Submit">
+	</form>
+</div>
+<div id="results">
+	<?php
+		$url = 'google.ca/#q=' . $_SERVER['QUERY_STRING'];
+		$output = file_get_contents($url); 
+		echo $output;
+	?>
+</div>
+
+
+</html>
