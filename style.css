@@ -60,6 +60,8 @@ body{
 
 #hNav{
     transform: rotate(-2deg);
+	-webkit-transform: rotate(-2deg);
+	-moz-animation: rotate(-2deg);
 	height: 150px;
 	width: inherit;
     background: url("Images/back2.png"); 
@@ -225,6 +227,7 @@ body{
 
 .Slide img{
 	width: 100%;
+	vertical-align: middle;
 }
 
 #Contact{
@@ -314,7 +317,7 @@ body{
 }
 
 #portNavButton{
-	width: 31.8%;
+	width: 31%;
 	display: inline-block;
 	height: 100%;
 	margin-right: 10px;
