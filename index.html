@@ -1,132 +1,283 @@
+<!DOCTYPE html>
+<html>
 <head>
-	<title>Brecon White - Design|Development|Multimedia</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="FontAwesome/css/font-awesome.min.css">
-  	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<title>Brecon White - Design Development Multimedia</title>
+	<link rel="shortcut icon" href="Images/favicon.png" />
+
+	<link href="https://fonts.googleapis.com/css?family=Arvo|Montserrat" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href='style.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-	<!--HEADER-->
+<div class='nav'>
+	<a href='#sky-horizon'>About</a>
+	<a href='#sea-horizon'>Work</a>
+	<a href='#sea'>Contact</a>
+</div>
 
-	<div id="Header">
-		<a href="index.html">
-			<div id="hInfo">
-				<div id="Name"><p>Brecon White</p></div>
-				<div id="LogoBack"></div>
-				<div id="Logo"><img src="Images/logo.png"> </div>
-			</div>
-		</a>
-		<div id="hNav">
-			<div id="hLinks">
-				<a href="about.html" class="NavButtonA">About</a>
-				<a href="portfolio.html" class="NavButtonP">Portfolio</a>
-			</div>
-			<div id="hSubLinks"></div>
+<div id='sky-horizon' class='block'>
+	<div class='animal'>
+		<img src='Images/gull.png'/>
+	</div>	
+	<div class='offset'>
+		<div class='animal'>
+			<img src='Images/gull.png'/>
 		</div>
 	</div>
-	
-	<!--MAIN-->
-
-	<div id="Main" class="noScroll">
-		
-		<div class="sliderArrow sL" style="left:0"><i class="fa fa-chevron-left"></i></div>
-		<div class="sliderArrow sR" style="right:0"><i class="fa fa-chevron-right"></i></div>
-		
-		<div class="Slide slide0 activeSlide" style='background: #35857D'>
-			<a href="https://pagezii.com">
-				<div id="SlideText">Pagezii, Your Digital Marketing Tool.</br> Since 2015, I've been working with the team at Shoutex</br> as a lead developer on the Pagezii App.</br> Try out our snapshot tools!</div>
-				<img src='Images/pagezii-logo.png' style='width: 400px; top: 30%; left: 200px; position: absolute;'/>
-				<img src="Images/pagezii.png" />
-			</a>
-		</div>		
-		<div class="Slide slide1 fadeOut">
-			<a href="/portfolio.html#pulse">
-				<div id="SlideText">A Pulse Influenced Arcade Brawler!</br> My university final project.</div>
-				<img src="Images/pulse.jpg" />
-			</a>
-		</div>	
-		<div class="Slide slide2 fadeOut">
-			<a href="portfolio.html">
-				<div id="SlideText">Check out my portfolio for more information!</div>
-				<img src="Images/about.jpg" />
-			</a>
-		</div>	
+	<div class='clouds'>
+		<img src='images/cloud.png'/>
+		<img src='images/cloud.png'/>
+		<img src='images/cloud.png'/>
 	</div>
-	
-	<!--CONTACT-->
+	<div id='about' class='content'>
+		<h1>Brecon White</h1>
+		<h3>Development - Design - Multimedia</h3>
+<!--</div>
 
-	<div id="Contact">Copyright <i class="fa fa-copyright"></i> 2016 &nbsp | &nbsp
-		<a href="mailto:breconwhite@gmail.com"><i class="fa fa-envelope"></i></a>&nbsp
-		<a href="https://github.com/breconwhite"><i class="fa fa-github"></i></a>
-		<a style="position:fixed; right:15; opacity:0.5" href="notthepage.html"><i class="fa fa-rebel"></i></a>
+<div id='sky-horizon' class='block'>-->
+		<div class='about'>
+			<p>Hey! My name is Brecon White, and I am a web developer, game dev and graphic designer. I currently hold a degree in Interactive Multimedia from Carleton University and Algonquin College.</p>
+			<p>Over the last few years I have worked in full stack web design, and have contributed to some great projects, mostly in Javascript and PHP. In my spare time, I like to work on personal web projects and game development. You can check out more of what I've done below.</p>
+			<h3><a target="_blank" href='resume.pdf'>Resume</a></h3>
+		</div>
 	</div>
 
+</div>
 
-	<script>
-		
-		var loopTime = setInterval(function() {loop("Right")}, 5000);
+<div id='sea-horizon' class='block'>
+	<h2>Projects</h2>
+	<!--<?php
 
-		var loopCount = 0;
+		$projects = [
+			'web'=>[
+				'shoutex'=>['Shoutex','images/thumbs/shoutexThumb1.png'],
+				'kivuto'=>['Kivuto','images/thumbs/kivutoThumb1.png'],
+			],
+			'games'=>[
+				'harpoon'=>['Harpoon','images/thumbs/harpoonThumb1.png'],
+				'gulls'=>['Gulls','images/thumbs/gullThumb2.png'],
+				'pulse'=>['Pulse Fighters','images/thumbs/logoThumb.png']
+			],
+			'design'=>[
+				'poster'=>['Kung Fu Hustle Redesign','images/thumbs/kungfuThumb.png'],
+			]
+		];
 
-		$( "a.NavButtonA" ).hover(
-		  function() {
-		    $( this ).append( $( 
-		    	"<div id='subNav' class='NavButtonA'><a href='Resume2016.pdf'>Resume</a><a href='https://github.com/breconwhite'>Github</a><a href='mailto:breconwhite@gmail.com'>Message</a></div>" ) );
-		  }).mouseleave(
-	    	function(){
-    			$(this).find( "div#subNav" ).remove();
-    	});
-		 
-		$( "a.NavButtonP" ).hover(
-		  function() {
-		    $( this ).append( 
-		    	$( "<div id='subNav'><a href='portfolio.html#web'>Web</a><a href='portfolio.html#design'>Design</a><a href='portfolio.html#games'>Games</a></div>" ) 
-		    );
-		  }).mouseleave(
-	    	function(){
-	    		$(this).find( "div#subNav" ).remove();
-    	});
-
-
-	 	$( "div.sR" ).click(function(){loop("Right"); clearInterval(loopTime); loopTime = setInterval(function() {loop("Right")}, 7000) });
-	 	$( "div.sL" ).click(function(){loop("Left"); clearInterval(loopTime); loopTime = setInterval(function() {loop("Right")}, 7000)  });
-
-	 	function loop(direction){
- 			
- 			if(direction == "Right")
- 			{
- 				if(loopCount < 2){
- 					loopCount ++;
- 				}
- 				else {
- 					loopCount = 0;
- 				}
- 			}
-			else if(direction == "Left"){
- 				if(loopCount > 0){
- 					loopCount --;
- 				}
- 				else {
- 					loopCount = 2;
- 				}
+		foreach($projects as $groupName => $group){
+			$topCount = count($group);
+			echo "<div class='group'>";
+			foreach($group as $projectName => $project){
+				$size = (rand(10,20)/10)*100;
+				echo "<div class='info $groupName' data-name='$projectName' style='width:".$size."px; height:".$size."px; margin:".($size/10)."px;'><span>".$project[0]."</span><img src='".$project[1]."'/></div>";
 			}
-	 		
- 			switch(loopCount){
- 				case 0:
- 					$("div").find("div.Slide").removeClass("activeSlide").removeClass("shiftLeft").removeClass("shiftRight").addClass("fadeOut");
- 					$("div").find("div.slide0").addClass("activeSlide").addClass("shift"+direction).removeClass("fadeOut");
- 					break;
- 				case 1:
- 					$("div").find("div.Slide").removeClass("activeSlide").removeClass("shiftLeft").removeClass("shiftRight").addClass("fadeOut");
- 					$("div").find("div.slide1").addClass("activeSlide").addClass("shift"+direction).removeClass("fadeOut");	 					
- 					break;
- 				case 2:
- 					$("div").find("div.Slide").removeClass("activeSlide").removeClass("shiftLeft").removeClass("shiftRight").addClass("fadeOut");
- 					$("div").find("div.slide2").addClass("activeSlide").addClass("shift"+direction).removeClass("fadeOut");
- 					break;
- 			}
-	 	}
+			echo "</div>";
+		}
+	?>-->
+	<div class='group'>
+		<div class='info shoutex' data-name='shoutex' style="width:150px; height:150px; margin:15px;"><span>Shoutex</span><img src='images/thumbs/shoutexThumb1.png'/></div>
+		<div class='info kivuto' data-name='kivuto' style="width:150px; height:150px; margin:15px;"><span>Kivuto</span><img src='images/thumbs/kivutoThumb1.png'/></div>
+	</div>
+	<div class='group'>
+		<div class='info harpoon' data-name='harpoon' style="width:150px; height:150px; margin:15px;"><span>Harpoon</span><img src='images/thumbs/harpoonThumb1.png'/></div>
+		<div class='info gulls' data-name='gulls' style="width:150px; height:150px; margin:15px;"><span>Gulls</span><img src='images/thumbs/gullThumb2.png'/></div>
+		<div class='info pulse' data-name='pulse' style="width:150px; height:150px; margin:15px;"><span>Pulse Fighter</span><img src='images/thumbs/logoThumb.png'/></div>
+	</div>
+	<div class='group'>
+		<div class='info poster' data-name='poster' style="width:150px; height:150px; margin:10px;"><span>Kung Fu Hustle Redesign</span><img src='images/thumbs/kungfuThumb.png'/></div>
+	</div>
 
-	</script>
-</body> 
+	<div id="project" style='display:none'>
+		<div class='left-panel'>
+			<div class='full-image'><img class='proj-img' src='images/thumbs/harpoonThumb1.png'/></div>
+		</div>
+		<div class='right-panel'>
+			<div class='inner'>
+				<div>
+					<h3 class='proj-title'>Harpoon</h3>
+					<div class='proj-info'></div>
+				</div>
+				<div class='thumbs'>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class='bottom-bar'></div>
+</div>
+
+<div id='sea' class='block'>
+
+	<div class='animal ccw'>
+		<img src='Images/ray.png'/>
+	</div>	<div class='animal ccw'>
+		<img src='Images/ray.png'/>
+	</div>
+
+	<div class='content'>
+		<h3>Looking to connect, or just stay up to date with my projects?</h3>
+		
+		<div class='contact-links'>
+			<a target="_blank" rel="nofollow" href='mailto:breconwhite@gmail.com'>Email</a>
+			<a target="_blank" rel="nofollow" href='https://twitter.com/Finch_Works'>Twitter</a>
+			<a target="_blank" rel="nofollow" href='https://github.com/breconwhite'>Github</a>
+		</div>
+	</div>
+</div>
+
+<div class='footer'>Copyright Brecon White &copy;<span id='date'></span></div>
+
+<script>
+
+	$(document).ready(function(){
+	    var d = new Date();
+	    var n = d.getFullYear();
+		$("#date").html(n);
+	});
+
+	var isDay = true;
+
+	$(document).on( 'scroll', function(){
+		if($('body').scrollTop() > 0){
+			$("#sky-horizon").find("h1").css('font-size','50px');
+			$("#sky-horizon").find("h1").css('padding-top','75px')
+			$("#sky-horizon").find("h1").stop();
+			$(".about").fadeIn();
+
+			$(".nav").css({
+				'background':"#22393a",
+				'padding':'20px 0px',
+				'opacity':'0.8'
+			});
+			$(".nav > a").css('color','white');
+		}
+		else{
+			$("#sky-horizon").find("h1").css('font-size','100px');
+			$("#sky-horizon").find("h1").css('padding-top','0px');
+			$(".about").fadeOut();
+
+			$(".nav").css({
+				'background':"transparent",
+				'padding':'50px 0px',
+				'opacity':'1'
+			});
+			$(".nav > a").css('color','#22393a');
+		}
+
+	 // 	if(isDay && $(window).scrollTop() + $(window).height() > $(document).height()-100) {
+		// 	$("body").css('color','#DEF');
+		// 	$("#sky").css('background','#2a343a');
+		// 	$("#sky-horizon").css({'background':'-moz-linear-gradient(top, #2a343a 0%, #3f484d 99%, #0f1e1d 100%)','background':'-webkit-linear-gradient(top, #2a343a 0%,#3f484d 99%,#0f1e1d 100%)','background':'linear-gradient(to bottom, #2a343a 0%,#3f484d 99%,#0f1e1d 100%)'});
+		// 	$("#sea-horizon").css({'background':'-moz-linear-gradient(top, #0f1e1d 0%, #263433 2%, #0f1e1d 100%)','background':'-webkit-linear-gradient(top, #0f1e1d 0%, #263433 2%, #0f1e1d 100%)','background':'linear-gradient(to bottom, #0f1e1d 0%, #263433 2%, #0f1e1d 100%)'});
+		// 	$("#sea").css('background','#0f1e1d');
+		// 	isDay = false;
+		// }
+		// else if(!isDay && $(window).scrollTop() === 0){
+		// 	isDay = true;
+		// 	$("body").css('color','#789');
+		// 	$("#sky").css('background','#b0d9f2');
+		// 	$("#sky-horizon").css({'background':'-moz-linear-gradient(top, #b0d9f2 0%, #f4f4f4 99%, #2b5346 100%)','background':'-webkit-linear-gradient(top, #b0d9f2 0%,#f4f4f4 99%,#2b5346 100%)','background':'linear-gradient(to bottom, #b0d9f2 0%,#f4f4f4 99%,#2b5346 100%)'});
+		// 	$("#sea-horizon").css({'background':'-moz-linear-gradient(top, #263433 0%, #396d5b 2%, #1d3a38 100%)','background':'-webkit-linear-gradient(top, #2b5346 0%, #396d5b 2%,#1d3a38 100%)','background':'linear-gradient(to bottom, #2b5346 0%, #396d5b 2%,#1d3a38 100%)'});
+		// 	$("#sea").css('background','#1d3a38');
+		// }
+	});
+
+	$('a[href^="#"]').click(function(){
+		var href = $(this).attr("href");
+		$('html,body').animate({scrollTop: $(href).offset().top},1000);
+	});
+
+	$(document).on('click','.info',function(){
+
+		var projectName = $(this).attr('data-name');
+	
+		$('.info').removeClass('selected');
+
+		$('.info').each(function(){
+
+			if(!$(this).hasClass('reduced')){
+				$(this).addClass('reduced');
+
+				$(this).animate({
+					top: 1000,
+				},
+				1000, function(){
+					$(this).appendTo(".bottom-bar");
+					$(this).css({'top':0,'display':'none'});
+
+					$(this).fadeIn('fast',function(){
+						getPage(projectName);
+						$(this).css('display','inline-block');
+						$('.group').css('display','none');
+						$("#sea-horizon > h2").css('display','none');
+
+						if($("#project").css('display') == 'none'){
+							$("#project").fadeIn();
+						}
+					});
+				});
+			}else{
+				$("#project").fadeOut(function(){
+					getPage(projectName);	
+					$("#project").fadeIn();								
+				});
+				return false;
+			}
+		});
+
+		$(this).addClass('selected');
+	});
+
+	$("body").on("click",".thumbs > div", function(){
+		var img = $(this).find('img').attr('src');
+		$(".full-image").fadeOut(function(){
+			$(".full-image > img").attr('src',img);
+			$(".full-image").fadeIn();
+		});
+	});
+
+	var titles = {'shoutex':'Shoutex','kivuto':'Kivuto','harpoon':'Harpoon','gulls':'Gulls','pulse':'Pulse Fighters','poster':'Kung Fu Hustle Redesign'};
+	var mainThumbs = {
+						'shoutex':'images/thumbs/shoutexThumb1.png',
+						'kivuto':'images/thumbs/kivutoThumb1.png',
+						'harpoon':'images/thumbs/harpoonThumb1.png',
+						'gulls':'images/thumbs/gullThumb2.png',
+						'pulse':'images/thumbs/logoThumb.png',
+						'poster':'images/thumbs/kungfuThumb.png'};
+
+	var info = {
+					"shoutex":"<p>Beginning in the summer of 2015, I worked as half of the development team at Shoutex Digital Marketing and it's product, Pagezii; a web based service for optimizing your web presence.</p><p>In this time period, I worked as a full stack developer for both sites, as well as a few smaller projects and clients handled by the company.</p><p>While here, I spent a great deal of time working on the Pagezii tool and SaaS environment used for analyzing web sites, blogs and even social media. This included lots of work in the back end server, including database integration and data processing, as well as front end development, UX work and design implementation.</p><a href='https://shoutex.com' target='_blank' rel='nofollow'>Shoutex Web Marketing</a><a href='https://pagezii.com' target='_blank' rel='nofollow'>Pagezii Digital Marketing Optimization</a>",
+					"kivuto":"<p>In the summer of 2014, I worked with Kivuto Solutions doing a front end development internship between semesters.</p><p>As part of the marketing team, I worked closely with their designers and the lead developer, to update sites and implement WCAG 2.0 Accesibiliy upgrades throughout their system. It was a great learning experience.</p><a href='https://kivuto.com' target='_blank' rel='nofollow'>Kivuto Solutions</a><a href='https://onthehub.com' target='_blank' rel='nofollow'>On The Hub</a>",
+					"harpoon":"<p>Harpoon is a personal pet project I've been tinkering with in my spare time over the last two years.</p><p>The game is a third person shooter and zelda-like revolving around an aged fisherman and his quest to stop a fish-man invasion.</p><p>Everything so far has been built by me, using Unity and Blender. This includes the models, textures, animations and engine. It's been in the works since I finished school, and still has a lot to go, but I'm proud of the progress and look forward to some day releasing it.</p>",
+					"gulls":"<p>While creating a larger game (Harpoon), Gulls was started in an attempt to create a similar project with a smaller scope.</p><p>Using the same assets, shaders and objects, I'm working on laying out the main hub enviornment for Harpoon, while working on something that can be finished in a shorter time period.</p><p>As a seagull, explore the island and soar high above the ocean.</p>",
+					"pulse":"<p>Pulse Fighters was my final year project for University, completed with five other students. </p><p>Using Unity, we created a four person fighting game, in the same vein as Super Smash Brothers. It featured the use of a mobile app to act as the controller, as well as a device that monitored the player's pulse, to be used to alter the game world based on the players reactions.<p>In this project, I was the lead programmer behind the game engine and assembled the assets into the final product. I also designed the logo and menu UI for the game.</p>",
+					"poster":"<p>A class project to design a poster for a movie.</p><p>In this case I chose Kung Fu Hustle, directed by Stephen Chow and released by Sony Pictures. I chose to use some prominent imagery and sybolism from the film.</p>"
+				}
+
+	var thumbs = {
+					"shoutex":'<div><img src="images/thumbs/shoutexThumb1.png"/></div><div><img src="images/thumbs/shoutexThumb2.png"/></div>',
+					"kivuto":'<div><img src="images/thumbs/kivutoThumb1.png"/></div>',
+					"harpoon":'<div><img src="images/thumbs/harpoonThumb1.png"/></div><div><img src="images/thumbs/harpoonThumb2.png"/></div><div><img src="images/thumbs/harpoonThumb3.png"/></div>',
+					"gulls":'<div><img src="images/thumbs/gullThumb1.png"/></div><div><img src="images/thumbs/gullThumb2.png"/></div><div><img src="images/thumbs/gullThumb3.png"/></div>',
+					"pulse":'<div><img src="images/thumbs/logoThumb.png"/></div>',
+					"poster":'<div><img src="images/thumbs/kungfuThumb.png"/></div>'
+	}
+
+	function getPage(projectName){
+
+		var title = titles[projectName];
+		var img = mainThumbs[projectName];
+		var inf = info[projectName];
+		var thmb = thumbs[projectName];
+
+		$(".proj-title").text(title);
+		$(".proj-img").attr('src',img);
+		$(".proj-info").html(inf);
+		$(".thumbs").html(thmb);
+	}
+
+</script>
+
+</body>
+</html>
